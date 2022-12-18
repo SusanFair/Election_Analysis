@@ -69,6 +69,8 @@ for num in numbers:
 for num in range(5):
     print(num)
 
+bog[]
+type("bog")
 
 
 counties_tuple = ("Arapahoe","Denver","Jefferson")
@@ -105,6 +107,27 @@ total_votes = int(input("What is the total number of votes in the election? "))
 message_to_candidate = (
     f"You received {candidate_votes:,} number of votes. "
     f"The total number of votes in the election was {total_votes:,}. "
-    f"You received {candidate_votes / total_votes * 100:2f}% of the total votes.")
+    f"You received {candidate_votes / total_votes * 100}% of the total votes.")
 
 print(message_to_candidate)
+
+
+
+
+voting_data = []
+voting_data.append({"county":"Arapahoe", "registered_voters":422829})
+voting_data.append({"county":"Denver", "registered_voters":463353})
+voting_data.append({"county":"Jefferson", "registered_voters": 432439})
+
+voting_data
+
+
+voting_data = [{"county":"Arapahoe", "registered_voters": 422829},
+                {"county":"Denver", "registered_voters": 463353},
+                {"county":"Jefferson", "registered_voters": 432438}]
+
+for i in range(len(counties_dict)):
+    print(counties_dict[i])
+    
+
+
