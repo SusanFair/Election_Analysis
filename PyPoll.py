@@ -39,68 +39,84 @@ with open(file_to_load) as election_data:
         # Add candidate name to the candidate list.
         # If the candidate does not match any existing candidates add to list
         if candidate_name not in candidate_options:
+            # Add candidate name to the candidate list
             candidate_options.append(candidate_name)
-
             # Begin tracking that candidate's vote count.
             candidate_votes[candidate_name] = 0
 
         # Add a vote to that candidate's count
         candidate_votes[candidate_name] += 1
 
-#Determine the percentage of votes per candidate
-for candidate_name in candidate_votes:
+        #Save the results to our text file
+        with open(file_to_save, "w") as txt_file:
+            # Print the final vote to the terminal
+            electrion_results = (
+                f"\n Election Results\n"
+                f"--------------------\n"
+                f"Total Votes: {total_votes:,}\n"
+                f"--------------------\n")
+            print(election_results, end="")
 
-    # Vote count per candidate
-    votes = candidate_votes[candidate_name]
+            # Save the final vote count to the text file.
+            txt_file.write(election_results)
 
-    #Calculate percentage of votes
-    vote_percentage = float(votes) / float(total_votes) * 100
+    #Determine the percentage of votes per candidate
+    for candidate_name in candidate_votes:
 
-    #Print candidate name and percentage of votes
-    print(f"{candidate_name}: received {vote_percentage:.1f}%  ({votes:,})\n")
+        # Vote count per candidate
+        votes = candidate_votes[candidate_name]
 
-    # Determine winning vote count and candidate
-    # If votes are greater than the winning count
-    if (votes > winning_count) and (vote_percentage > winning_percentage):
-        #True set as winning_count and winning_percent
-        winning_count = votes
-        winning_percentage = vote_percentage
-        # Set candidate as the winning candidate 
-        winning_candidate = candidate_name
+        #Calculate percentage of votes
+        vote_percentage = float(votes) / float(total_votes) * 100
 
+        #Print candidate name and percentage of votes
+        # Commented out print, print to file instead
+        #print(f"{candidate_name}: received {vote_percentage:.1f}%  ({votes:,})\n")
 
-#Winning summary
-winning_candidate_summary = (
-    f"------------------------------------------\n"
-    f"Winner: {winning_candidate}\n"
-    f"Winnning Vote Count: {winning_count:,}\n"
-    F"Winning Percentage: {winning_percentage:.1f}%\n"
-    f"------------------------------------------\n")
-
-print(winning_candidate_summary)
-
-
-
-# Print total votes
-#print(total_votes)
-#print(candidate_options)
-#print(candidate_votes)
+        # Determine winning vote count and candidate
+        # If votes are greater than the winning count
+        if (votes > winning_count) and (vote_percentage > winning_percentage):
+            #True set as winning_count and winning_percent
+            winning_count = votes
+            winning_percentage = vote_percentage
+            # Set candidate as the winning candidate 
+            winning_candidate = candidate_name
 
 
+    # Print winning summary
+    winning_candidate_summary = (
+        f"------------------------------------------\n"
+        f"Winner: {winning_candidate}\n"
+        f"Winnning Vote Count: {winning_count:,}\n"
+        F"Winning Percentage: {winning_percentage:.1f}%\n"
+        f"------------------------------------------\n")
+
+    # commented out  print, print to file instead
+    #print(winning_candidate_summary)
+
+
+
+
+    # Print total votes
+    #print(total_votes)
+    #print(candidate_options)
+    #print(candidate_votes)
 
 
 
 
 
 
-#Test write to file & Close file
- #   txt_file.write("Counties in the Election\n")
- #   txt_file.write("-------------------------\n")
- #   txt_file.write("Arapahoe, ")
- #   txt_file.write("\nDenver, ")
- #   txt_file.write("\nJefferson")
- #   txt_file.write("\nKent, Lampton, Harwich")
-#outfile.close()
+
+
+    #Test write to file & Close file
+    #   txt_file.write("Counties in the Election\n")
+    #   txt_file.write("-------------------------\n")
+    #   txt_file.write("Arapahoe, ")
+    #   txt_file.write("\nDenver, ")
+    #   txt_file.write("\nJefferson")
+    #   txt_file.write("\nKent, Lampton, Harwich")
+    #outfile.close()
 
 # Close the file
 #election_data.close()
