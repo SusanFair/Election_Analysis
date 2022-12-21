@@ -10,8 +10,8 @@ Refer to image on 3.6.5 for details needed in summary
 The results of the election are clear with Denver receiving the largest number of votes and a significant, even overwholming win.  The results breakdown is as follows:
 * Total Votes: 369,711
 * Total Votes per County:
-* * Jefferson: 10.5% (38,855)
-* * Denver: 82.8% (306,055)
+  * Jefferson: 10.5% (38,855)
+  * Denver: 82.8% (306,055)
 * * Arapahoe: 6.7% (24,801)
 
 
