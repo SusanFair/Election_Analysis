@@ -29,18 +29,18 @@ For the raw data is available in the election_results.csv file found here:
 In performing this Election Audit we provided clear and detailed results of this US Congressional precinct election.  See the Election-Audit Results above.  In addition we were able to provide a proven tool for performing similar audits on a number of elections and election types.
 
 ### PyPoll Re-Use and Flexability
-The code as currently written has a good amount of flexibility due to common naming conventions.  No specific references to the Colorad precint or state or candidate is referenced.  Generic names for files were used e.g.: election_results.csv, election_data, candidate_name, etc.  This code would therefore be usable in other congressional districts, senatorial districts and local elections.
+The code as currently written has a good amount of flexibility due to common naming conventions.  No specific references to the Colorado precint or state or candidate is referenced.  Generic names for files and variables were used e.g.: election_results.csv, election_data, candidate_name, etc.  This code would therefore be usable in other congressional districts, senatorial districts and local elections.
 
 ### Modification to expand usability
 The current code is design to read a .csv file.  Election results however often come in different formats.  Based on the research provided there are 3 typical types of input received:
 * mail-in ballots
   * hand counted, entered into a csv file
 * punch cards
-  * Collect and fed into a machine that tabulates vote total
-  * Note:  The code would have to be modified to accept not only a list of votes but factor in these already totaled votes as well.
+  * Collected and fed into a machine that tabulates vote totals
+  * **Possible modification**:  The code would have to be modified to accept not only a list of votes but factor in these already totaled votes as well.
 * direct recording electronic (DRE)  counting machines
   * sent to the central office and read by a computer
-  * Note:  the computer output file in this case may be a csv or a different file type.  The code would have to be modified to look for and additonal file and consider the data contained in it when performing county and candidate total.
+  * **Possible modification**:  the computer output file in this case may be a csv or a different file type.  The code would have to be modified to look for and additonal file/type and consider the data contained in it when performing county and candidate totals.
 
 
 
