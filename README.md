@@ -44,15 +44,3 @@ The current code is design to read a .csv file.  Election results however often 
 
 
 
-
-
-
-
-
-
-
-
-
-# Background info for later
-
-
