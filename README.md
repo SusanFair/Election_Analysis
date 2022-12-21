@@ -1,10 +1,7 @@
 # Election_Analysis
 
 ## Overview of Election Audit
-Based on a request from the Colorado Board of Elections this project has been asked perform an Election Audit.  This audit will result in a report containing the total number of votes cast, the total number of votes per candidate, the percent of votes for each candidate and the official winner of the election based on the data provided. 
-
-Refer to image on 3.6.5 for details needed in summary
-
+Based on a request from the Colorado Board of Elections this project has been tasked perform an Election Audit.  This audit will result in a report containing the total number of votes cast, the total number of votes per candidate, the percent of votes for each candidate and the official winner of the election based on the data provided. 
 
 ## Election-Audit Results
 The results of the election are clear with Denver receiving the largest number of votes and a significant, even overwholming win.  The results breakdown is as follows:
@@ -23,10 +20,10 @@ The results of the election are clear with Denver receiving the largest number o
   * Winning Percentage: 73.8%
 
 For an output of election results - see election_analysis.txt
-* [results]](https://github.com/SusanFair/Election_Analysis/blob/main/analysis/election_analysis.txt)
+* [election_analysis.txt](https://github.com/SusanFair/Election_Analysis/blob/main/analysis/election_analysis.txt)
 
 For the raw data is available in the election_results.csv file found here:
-* [data](https://github.com/SusanFair/Election_Analysis/blob/main/Resources/election_results.csv)
+* [election_results.csv](https://github.com/SusanFair/Election_Analysis/blob/main/Resources/election_results.csv)
 
 ## Election-Audit Summary
 In performing this Election Audit we provided clear and detailed results of this US Congressional precinct election.  See the Election-Audit Results above.  In addition we were able to provide a proven tool for performing similar audits on a number of elections and election types.
